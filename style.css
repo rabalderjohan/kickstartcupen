@@ -1,0 +1,119 @@
+
+@font-face {
+	font-family: 'lipstick';
+	src: url('fonts/lipstick/lipstickscriptsskbold.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/lipstick/lipstickscriptsskbold.woff') format('woff'),
+	     url('fonts/lipstick/lipstickscriptsskbold.ttf')  format('truetype'),
+	     url('fonts/lipstick/lipstickscriptsskbold.svg#svgFontName') format('svg');
+}
+@font-face {
+  font-family: 'brushup';
+  src: url('fonts/brushup/pintassilgoprintsbrushup.eot?#iefix') format('embedded-opentype'),
+       url('fonts/brushup/pintassilgoprintsbrushup.woff') format('woff'),
+       url('fonts/brushup/pintassilgoprintsbrushup.ttf')  format('truetype'),
+       url('fonts/brushup/pintassilgoprintsbrushup.svg#svgFontName') format('svg');
+}
+h1,h2 {
+  font-family: brushup,serif;
+  color: #ae1a87;
+}
+h1 span.superlarge {
+
+}
+.header {
+  background-color: #fff;
+}
+.header .header-top {
+  height: 80px;
+}
+.header .header-info {
+  background-image: url(images/ksc-bg-people.png);
+  height: 561px;
+  width: 100%;
+  background-color: #70aed1;
+  background-position: center 50%;
+  background-size: cover;
+}
+.header .header-nav {
+  padding-top: 20px;
+}
+.header .logo-wrapper {
+  width: 159px;
+  height: 142px;
+  position: relative;
+}
+.header .logo-wrapper {
+  position: absolute;
+  top: -51px;
+}
+ul.nav {
+  list-style: none;
+  list-style-image: none;
+  background-color: #e3e3e3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 0px;
+}
+ul.nav li {
+  display: inline-block;
+  background-color: #e3e3e3;
+  font-size: 0px;
+}
+ul.nav li a {
+  color: #47280b;
+  display: block;
+  line-height: 68px;
+  font-size: 20px;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  /*
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 2px solid white;
+  position: relative;
+  */
+}
+ul.nav li.active {
+  background-color: #47280b;
+  color: #e3e3e3;
+}
+ul.nav li.active a {
+  color: #e3e3e3;
+}
+ul.nav li a:hover {
+  background-color: #47280b;
+  color: #e3e3e3;
+}
+ul.nav li.first, ul.nav li.first a {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+ul.nav li.last, ul.nav li.last a {
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
