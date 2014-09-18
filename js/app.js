@@ -1,2 +1,2 @@
 
-angular.module('KscApp',['KscApp.controllers','KscApp.factories','ui.bootstrap'])
+angular.module('KscApp',['KscApp.controllers','KscApp.factories','ui.bootstrap','duParallax'])

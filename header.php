@@ -30,6 +30,8 @@
     <!-- Le javascript -->
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular/angular.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/ng-parallax/angular-parallax.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/app.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/controllers.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/factories.js"></script>
@@ -37,24 +39,20 @@
   <body>
     <?php
     $args = array(
-          'numberposts' => 1,
-          'post_type' => 'CustomHeader'
-          //'order' => 'ASC'
-        );
-        $var = get_posts($args);
-        print_r($var);
-        echo 'hej';
-        foreach ($var as $key) {
-          echo 'nj';
-          echo $key->ID;
-          $sna = get_field('intro_text',$key->ID);
-          echo $sna;
-
-        }
-        echo '<h1>YES</h1>';
+      'numberposts' => 1,
+      'post_type' => 'CustomHeader'
+    );
+    $var = get_posts($args);
+    foreach ($var as $key) {
+      $intro_text = get_field('intro_text',$key->ID);
+      $instructions_header = get_field('instructions_header',$key->ID);
+      $instructions_text = get_field('instructions_text',$key->ID);
+      $prize_header = get_field('prize_header',$key->ID);
+      $prize_text = get_field('prize_text',$key->ID);
+    }
     ?>
     <div class="full-wrapper">
-      <div class="header">
+      <div class="header" ng-controller="HeaderCtrl">
         <div class="header-top">
 
         </div>
@@ -95,9 +93,37 @@
               <h1>Kickstart</h1>
               <h1><span class="superlarge">cupen</span></h1>
               <p>
-
+                <?php echo $intro_text; ?>
               </p>
             </div>
           </div>
+        </div>
+        <div class="header-instructions">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2><?php echo $instructions_header; ?></h2>
+                <p>
+                  <?php echo $instructions_text;  ?>
+                </p>
+                <h2><?php echo $prize_header; ?></h2>
+                <p>
+                  <?php echo $prize_text;  ?>
+                </p>
+                <div class="ksc-scroll-info">
+                  <h3>Scrolla ner för att följa cupen!</h3>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" du-parallax y="background" alt="Instagram girl in phone" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-end">
+
+        </div>
+        <div class="section-break">
+
         </div>
       </div>

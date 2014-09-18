@@ -17,8 +17,24 @@ h1,h2 {
   font-family: brushup,serif;
   color: #ae1a87;
 }
+h3 {
+	font-family: lipstick,serif;
+	color: #ed8b00;
+}
 h1 span.superlarge {
 
+}
+.orange {
+	color: #ed8b00;
+}
+.section-break {
+	height: 60px;
+	background-color: #70aed1;
+	background-image: url(images/ksc-section-arrow.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	position: relative;
+	z-index: 2;
 }
 .header {
   background-color: #fff;
