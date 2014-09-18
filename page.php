@@ -29,13 +29,33 @@ get_header();
             <div class="page-rules-search">
               <div class="row">
                 <div id="search" class="col-sm-6">
-                  <button class="btn btn-ksc-blu btn-block" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
-                  <div collapse="isCollapsed">
+                  <button class="btn btn-ksc-blu btn-block" ng-click="rulesCollapsed = !rulesCollapsed">Toggle collapse</button>
+                  <div collapse="!rulesCollapsed">
 		                <div class="well well-lg">Some content</div>
 	                 </div>
                 </div>
                 <div class="col-sm-6">
-                  <input class="form-control search" placeholder="Sök">
+                  <input class="form-control search" ng-model="search.user.username" placeholder="Sök">
+                </div>
+              </div>
+            </div>
+            <div id="tags" class="page-tags" ng-controller="TagCtrl">
+              <div class="row">
+                <div class="col-sm-3" ng-repeat="item in items | filter:search">
+                  <div class="ig-item">
+                    <img class="img-responsive" ng-src="{{item.images.standard_resolution.url}}" alt="" />
+                    <h6 ng-click="isCollapsed = !isCollapsed">@{{item.user.username}}</h6>
+                    <div class="ig-item-caption" collapse="!isCollapsed">
+                      <p>
+                        {{item.caption.text}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 ig-spinner">
+                  <span us-spinner="{color:'#ffffff'}" spinner-key="spinner" spinner-start-active="1"></span>
                 </div>
               </div>
             </div>

@@ -32,9 +32,12 @@
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-scroll/angular-scroll.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/ng-parallax/angular-parallax.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/spin.js/spin.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-spinner/angular-spinner.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/app.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/controllers.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/factories.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/services.js"></script>
   </head>
   <body>
     <?php
@@ -69,16 +72,16 @@
                   <!-- Static navbar -->
                   <ul class="nav">
                     <li class="first active">
-                      <a class="" href="#">Hur tävlar man?</a>
+                      <a class="" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
                     </li>
                     <li>
-                      <a href="#">Se alla bidrag</a>
+                      <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
                     </li>
                     <li>
-                      <a href="#">Om UF</a>
+                      <a href="#about" du-smooth-scroll>Om UF</a>
                     </li>
                     <li>
-                      <a href="#">ungforetagsamhet.se</a>
+                      <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
                     </li>
                     <li class="last">
                       <a href="#">Kontakt</a>
@@ -105,7 +108,7 @@
         <div class="header-instructions">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6">
+              <div id="instuctions" class="col-sm-6">
                 <h2 class="as-btn-xs"><?php echo $instructions_header; ?></h2>
                 <p class="tilter"><?php echo $instructions_text;  ?></p>
                 <h2 class="as-btn-xs"><?php echo $prize_header; ?></h2>

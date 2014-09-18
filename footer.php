@@ -23,7 +23,7 @@
           $footer_desktop_only = get_field('footer_desktop_only',$key->ID);
         }
         ?>
-        <div class="container">
+        <div id="about" class="container">
           <h2><?php echo $footer_header; ?></h2>
           <div class="row">
             <div class="col-sm-6">
