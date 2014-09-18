@@ -10,6 +10,43 @@
  * @since Kickstartcupen 1.0
  */
 ?>
+      <div class="footer">
+        <?php
+        $args = array(
+          'numberposts' => 1,
+          'post_type' => 'CustomFooter'
+        );
+        $var = get_posts($args);
+        foreach ($var as $key) {
+          $footer_header = get_field('footer_header',$key->ID);
+          $footer_all_devices = get_field('footer_all_devices',$key->ID);
+          $footer_desktop_only = get_field('footer_desktop_only',$key->ID);
+        }
+        ?>
+        <div class="container">
+          <h2><?php echo $footer_header; ?></h2>
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="tilter somepad">
+                <?php echo $footer_all_devices; ?>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <p class="tilter hidden-xs">
+                <?php echo $footer_desktop_only; ?>
+              </p>
+              <p class="tilter">
+                Läs mer på <a href="http://www.ungforetagsamhet.se/">ungforetagsamhet.se</a>!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-end text-center bgbrown">
+        <p>
+          &copy; UNG FÖRETAGSAMHET 2014
+        </p>
+      </div>
     </div><!-- .full-wrapper -->
     <?php
 		/* Always have wp_footer() just before the closing </body>

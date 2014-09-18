@@ -7,6 +7,12 @@ function site_init() {
 		"public" => true,
 		"label" => "CustomHeader"
 	);
-	register_post_type( "customheader", $args );  
+	register_post_type( "customheader", $args );
+
+	$args = array(
+		"public" => true,
+		"label" => "CustomFooter"
+	);
+	register_post_type( "customfooter", $args );
 }
 ?>

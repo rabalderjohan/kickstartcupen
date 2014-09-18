@@ -14,3 +14,6 @@ get_header();
       <div class="page-wrapper" ng-controller="PageCtrl">
 
       </div>
+<?php
+get_footer();
+?>

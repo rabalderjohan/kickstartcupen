@@ -57,7 +57,7 @@
 
         </div>
         <div class="header-info">
-          <div class="header-nav">
+          <div class="header-nav hidden-xs hidden-sm">
             <div class="container">
               <div class="row">
                 <div class="col-sm-2">
@@ -90,11 +90,15 @@
           </div>
           <div class="header-description">
             <div class="container">
-              <h1>Kickstart</h1>
-              <h1><span class="superlarge">cupen</span></h1>
-              <p>
-                <?php echo $intro_text; ?>
-              </p>
+              <div class="row">
+                <div class="col-sm-6 hd-padder">
+                  <img class="img-responsive ksc-logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo.png" alt="Kickstartcupen logotyp" />
+                  <p class="tilter">
+                    <?php echo $intro_text; ?>
+                  </p>
+                  <img class="img-responsive ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen logotyp" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -102,16 +106,14 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <h2><?php echo $instructions_header; ?></h2>
-                <p>
-                  <?php echo $instructions_text;  ?>
-                </p>
-                <h2><?php echo $prize_header; ?></h2>
-                <p>
+                <h2 class="as-btn-xs"><?php echo $instructions_header; ?></h2>
+                <p class="tilter"><?php echo $instructions_text;  ?></p>
+                <h2 class="as-btn-xs"><?php echo $prize_header; ?></h2>
+                <p class="tilter">
                   <?php echo $prize_text;  ?>
                 </p>
                 <div class="ksc-scroll-info">
-                  <h3>Scrolla ner för att följa cupen!</h3>
+
                 </div>
               </div>
               <div class="col-sm-6">
@@ -124,6 +126,13 @@
 
         </div>
         <div class="section-break">
-
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 section-break-intro hidden-xs">
+                <h3>Scrolla ner för att följa cupen!</h3>
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow.png" alt="Pink arrow" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
