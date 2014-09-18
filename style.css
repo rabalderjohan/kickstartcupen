@@ -13,6 +13,31 @@
        url('fonts/brushup/pintassilgoprintsbrushup.ttf')  format('truetype'),
        url('fonts/brushup/pintassilgoprintsbrushup.svg#svgFontName') format('svg');
 }
+/*Bs override*/
+.btn {
+	font-family: brushup, arial, sans-serif;
+	font-size: 24px;
+}
+.btn-ksc-blu {
+	background-color: #a6cde3;
+	color: #fff;
+	background-image: url(images/ksc-arrow-down.png);
+	background-position: center right 12px;
+	background-repeat: no-repeat;
+}
+.btn-ksc-blu:hover {
+	color: #fff;
+}
+.form-control.search {
+	font-family: brushup, arial, sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	padding: 24px;
+	background-image: url(images/ksc-icon-search.png);
+	background-position: center right 12px;
+	background-repeat: no-repeat;
+}
+/**/
 body {
 	font-family: arial,sans-serif;
 	background-color: #f9f9f9;
@@ -65,10 +90,10 @@ a {
 h1 span.superlarge {
 
 }
-p.tilter,.header-instructions p {
+p.tilter,.header-instructions p, .page-text p {
 	font-weight: bold;
 }
-p.tilter, .header-instructions p {
+p.tilter, .header-instructions p, h3.tilter,.page-text p {
 	-webkit-transform: rotate(-3deg);
 	/* Firefox */
 	-moz-transform: rotate(-3deg);
@@ -79,7 +104,7 @@ p.tilter, .header-instructions p {
 	/* Internet Explorer */
 	/*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
 }
-.orange {
+.orange,p span {
 	color: #ed8b00;
 }
 .bgbrown {
@@ -147,6 +172,20 @@ p.tilter, .header-instructions p {
   position: absolute;
   top: -51px;
 }
+.phone-play {
+	position: relative;
+}
+.phone-play .arrow-up, .phone-play .play-text {
+	position: absolute;
+}
+.phone-play .arrow-up {
+	right: 50px;
+	top: 50%;
+}
+.phone-play .play-text {
+	right: 0px;
+	top: 60%;
+}
 ul.nav {
   list-style: none;
   list-style-image: none;
@@ -204,6 +243,16 @@ ul.nav li.last, ul.nav li.last a {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+/*Page*/
+.page-wrapper {
+	background-color: #70aed1;
+	position: relative;
+	z-index: 2;
+}
+.page-intro {
+	padding-bottom: 50px;
+}
+/*Footer*/
 .footer .somepad {
 	margin-top :20px;
 }
@@ -212,6 +261,7 @@ ul.nav li.last, ul.nav li.last a {
 	padding: 16px;
 	font-size: 14px;
 	margin-top: 70px;
+	margin-bottom :0px;
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {

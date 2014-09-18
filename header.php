@@ -116,8 +116,10 @@
 
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6 phone-play">
                 <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" du-parallax y="background" alt="Instagram girl in phone" />
+                <img class="arrow-up hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
+                <h3 class="play-text hidden-xs tilter">Spela filmen!</h3>
               </div>
             </div>
           </div>
