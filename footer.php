@@ -42,7 +42,9 @@
                 <img class="who-arrow" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-up-up.png" alt="Pink arrow" />
                 <h3 class="who-text">Vilka är vi och<br>vad vi gör</h3>
               </div>
-              <img class="img-responsive ksc-push hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen logotyp" />
+              <a href="http://www.ungforetagsamhet.se/" target="_blank">
+                <img class="img-responsive ksc-push hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
+              </a>
             </div>
           </div>
         </div>

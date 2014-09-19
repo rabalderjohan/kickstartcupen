@@ -18,7 +18,8 @@
     <title>Kickstartcupen</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ."?" . rand(); ?>" type="text/css" media="screen" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,8 +39,9 @@
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/controllers.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/factories.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/services.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/config.js"></script>
   </head>
-  <body>
+  <body ng-cloak>
     <?php
     $args = array(
       'numberposts' => 1,
@@ -131,7 +133,9 @@
                   <p class="tilter">
                     <?php echo $intro_text; ?>
                   </p>
-                  <img class="img-responsive ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen logotyp" />
+                  <a href="http://www.ungforetagsamhet.se/" target="_blank">
+                    <img class="img-responsive ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -140,7 +144,7 @@
         <div class="header-instructions">
           <div class="container">
             <div class="row">
-              <div id="instuctions" class="col-sm-6">
+              <div id="instuctions" class="col-sm-6 instructions">
                 <h2 class="as-btn-xs" ng-click="instCollapsed = !instCollapsed"><?php echo $instructions_header; ?></h2>
                 <p class="tilter hidden-sm" collapse="!instCollapsed"><?php echo $instructions_text;  ?></p>
                 <p class="tilter hidden-xs"><?php echo $instructions_text;  ?></p>

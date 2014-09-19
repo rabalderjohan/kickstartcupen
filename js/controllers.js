@@ -1,12 +1,12 @@
 
 angular.module('KscApp.controllers',[])
 
-  .controller('HeaderCtrl',['$scope','parallaxHelper',function($scope,parallaxHelper){
-    $scope.background = parallaxHelper.createAnimator(-0.12,null,null,-80);
+  .controller('HeaderCtrl',['$scope','parallaxHelper','animationSpeed','animationOffset',function($scope,parallaxHelper,animationSpeed,animationOffset){
+    $scope.background = parallaxHelper.createAnimator(animationSpeed,null,null,animationOffset);
   }])
 
   .controller('PageCtrl',['$scope',function($scope){
-    console.log('Page ctrl');
+
   }])
 
   .controller('TagCtrl',['$scope','$modal','TagService','usSpinnerService',function($scope,$modal,TagService,usSpinnerService){
@@ -14,7 +14,6 @@ angular.module('KscApp.controllers',[])
     $scope.tag = TagService.start();
 
     $scope.$on('rawlist',function(event,response){
-      console.log(response);
       $scope.items = response;
       usSpinnerService.stop('spinner');
     });

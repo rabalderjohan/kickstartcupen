@@ -149,7 +149,7 @@ get_header();
             </div>
             <div id="tags" class="page-tags" ng-controller="TagCtrl">
               <div class="row">
-                <div class="col-sm-3" ng-repeat="item in items | filter:search">
+                <div class="col-sm-3" ng-repeat="item in items | filter:search | limitTo:12">
                   <div class="ig-item">
                     <img class="img-responsive" ng-src="{{item.images.standard_resolution.url}}" alt="" ng-click="showItem(item.link)" />
                     <h6 ng-click="isCollapsed = !isCollapsed">@{{item.user.username}}</h6>
