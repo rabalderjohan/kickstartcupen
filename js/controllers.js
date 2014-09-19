@@ -10,13 +10,20 @@ angular.module('KscApp.controllers',[])
   }])
 
   .controller('TagCtrl',['$scope','$modal','TagService','usSpinnerService',function($scope,$modal,TagService,usSpinnerService){
+    $scope.loaded = false;
+    $scope.startNum = 12;
     $scope.items = [];
     $scope.tag = TagService.start();
 
     $scope.$on('rawlist',function(event,response){
       $scope.items = response;
+      $scope.loaded = true;
       usSpinnerService.stop('spinner');
     });
+
+    $scope.infiniteScroll = function() {
+      $scope.loaded ? $scope.startNum += 12 : null;
+    };
 
     $scope.showItem = function(url) {
       $scope.link = url;

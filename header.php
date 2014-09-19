@@ -35,6 +35,7 @@
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/ng-parallax/angular-parallax.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/spin.js/spin.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-spinner/angular-spinner.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-inview/angular-inview.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/app.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/controllers.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/factories.js"></script>
