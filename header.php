@@ -57,7 +57,39 @@
     <div class="full-wrapper">
       <div class="header" ng-controller="HeaderCtrl">
         <div class="header-top">
-
+          <div class="container visible-xs">
+            <div class="row">
+              <div class="col-sm-6 col-xs-6">
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
+              </div>
+              <div class="col-sm-6 col-xs-6">
+                <button class="navbar-toggle" ng-click="navCollapsed = !navCollapsed">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="nav-xs hidden-sm" collapse="!navCollapsed">
+            <ul>
+              <li>
+                <a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
+              </li>
+              <li>
+                <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
+              </li>
+              <li>
+                <a href="#about" du-smooth-scroll>Om UF</a>
+              </li>
+              <li>
+                <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
+              </li>
+              <li>
+                <a href="#">Kontakt</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="header-info">
           <div class="header-nav hidden-xs hidden-sm">
@@ -71,8 +103,8 @@
                 <div class="col-sm-8">
                   <!-- Static navbar -->
                   <ul class="nav">
-                    <li class="first active">
-                      <a class="" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
+                    <li class="first">
+                      <a class="active" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
                     </li>
                     <li>
                       <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
@@ -109,18 +141,22 @@
           <div class="container">
             <div class="row">
               <div id="instuctions" class="col-sm-6">
-                <h2 class="as-btn-xs"><?php echo $instructions_header; ?></h2>
-                <p class="tilter"><?php echo $instructions_text;  ?></p>
-                <h2 class="as-btn-xs"><?php echo $prize_header; ?></h2>
-                <p class="tilter">
+                <h2 class="as-btn-xs" ng-click="instCollapsed = !instCollapsed"><?php echo $instructions_header; ?></h2>
+                <p class="tilter hidden-sm" collapse="!instCollapsed"><?php echo $instructions_text;  ?></p>
+                <p class="tilter hidden-xs"><?php echo $instructions_text;  ?></p>
+                <h2 class="as-btn-xs" ng-click="prizeCollapsed = !prizeCollapsed"><?php echo $prize_header; ?></h2>
+                <p class="tilter hidden-sm" collapse="!prizeCollapsed">
+                  <?php echo $prize_text;  ?>
+                </p>
+                <p class="tilter hidden-xs">
                   <?php echo $prize_text;  ?>
                 </p>
                 <div class="ksc-scroll-info">
 
                 </div>
               </div>
-              <div class="col-sm-6 phone-play">
-                <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" du-parallax y="background" alt="Instagram girl in phone" />
+              <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
+                <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" du-parallax y="background" alt="Instagram girl in phone" />
                 <img class="arrow-up hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
                 <h3 class="play-text hidden-xs tilter">Spela filmen!</h3>
               </div>
