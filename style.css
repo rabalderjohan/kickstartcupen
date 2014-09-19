@@ -370,6 +370,25 @@ ul.nav li.last, ul.nav li.last a {
 	margin-top: 70px;
 	margin-bottom :0px;
 }
+.footer .abouter {
+	position: relative;
+}
+.footer .abouter .ksc-push {
+	position: absolute;
+	right: -140px;
+	top: -30px;
+}
+.footer .who-text,.footer .who-arrow {
+	position: absolute;
+}
+.footer .who-text {
+	left: 64%;
+	bottom:-90px;
+}
+.footer .who-arrow {
+	left: 50%;
+	bottom:-40px;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	h2 {

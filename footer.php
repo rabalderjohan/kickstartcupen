@@ -23,7 +23,7 @@
           $footer_desktop_only = get_field('footer_desktop_only',$key->ID);
         }
         ?>
-        <div id="about" class="container">
+        <div id="about" class="container abouter">
           <h2><?php echo $footer_header; ?></h2>
           <div class="row">
             <div class="col-sm-6">
@@ -38,6 +38,11 @@
               <p class="tilter">
                 Läs mer på <a href="http://www.ungforetagsamhet.se/">ungforetagsamhet.se</a>!
               </p>
+              <div class="fotter-who hidden-xs">
+                <img class="who-arrow" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-up-up.png" alt="Pink arrow" />
+                <h3 class="who-text">Vilka är vi och<br>vad vi gör</h3>
+              </div>
+              <img class="img-responsive ksc-push hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen logotyp" />
             </div>
           </div>
         </div>
