@@ -95,25 +95,45 @@
           </div>
         </div>
         <div class="header-info">
-          <div class="header-nav hidden-xs hidden-sm">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-2">
-                  <div class="logo-wrapper">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
+          <div class="header-lamp">
+            <div class="header-nav hidden-xs hidden-sm">
+              <div class="container lamp-container">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <div class="logo-wrapper">
+                      <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-10">
-                  <nav class="MainMenu--desktop">
-                    <ul class="menu">
-                      <li class="first active">
-                        <a href="#">Hur tävlar man?</a>
-                      </li>
-                      <li class="collapsed">
-                        <a href="#">Se alla bidrag</a>
+                  <div class="col-sm-10">
+                    <nav class="MainMenu--desktop">
+                      <ul class="menu">
+                        <li class="first active">
+                          <a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
+                        </li>
+                        <li class="collapsed">
+                          <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
+                        </li>
+                        <li>
+                          <a href="#about" du-smooth-scroll>Om UF</a>
+                        </li>
+                        <li>
+                          <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
+                        </li>
+                        <li class="last">
+                          <a href="#">Kontakt</a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <!-- Static navbar -->
+                    <ul class="ksc-nav" style="display:none">
+                      <li class="first">
+                        <a class="active" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
                       </li>
                       <li>
-                        <a href="#">Om UF</a>
+                        <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
+                      </li>
+                      <li>
+                        <a href="#about" du-smooth-scroll>Om UF</a>
                       </li>
                       <li>
                         <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
@@ -122,46 +142,28 @@
                         <a href="#">Kontakt</a>
                       </li>
                     </ul>
-                  </nav>
-                  <!-- Static navbar -->
-                  <ul class="ksc-nav" style="display:none">
-                    <li class="first">
-                      <a class="active" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
-                    </li>
-                    <li>
-                      <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-                    </li>
-                    <li>
-                      <a href="#about" du-smooth-scroll>Om UF</a>
-                    </li>
-                    <li>
-                      <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
-                    </li>
-                    <li class="last">
-                      <a href="#">Kontakt</a>
-                    </li>
-                  </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="header-description">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-6 hd-padder">
-                  <img class="img-responsive ksc-logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo.png" alt="Kickstartcupen logotyp" />
-                  <p class="tilter">
-                    <?php echo $intro_text; ?>
-                  </p>
-                  <a href="http://www.ungforetagsamhet.se/" target="_blank">
-                    <img class="img-responsive ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
-                  </a>
+            <div class="header-description">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 hd-padder">
+                    <img class="img-responsive ksc-logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo.png" alt="Kickstartcupen logotyp" />
+                    <p class="tilter">
+                      <?php echo $intro_text; ?>
+                    </p>
+                    <a href="http://www.ungforetagsamhet.se/" target="_blank">
+                      <img class="img-responsive ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="header-instructions">
+        <div class="header-instructions vignette-bg">
           <div class="container">
             <div class="row">
               <div id="instuctions" class="col-sm-6 instructions">
@@ -180,7 +182,8 @@
                 </div>
               </div>
               <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
-                <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" du-parallax y="background" alt="Instagram girl in phone" />
+                <img class="img-responsive center-block ppter visible-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" alt="Instagram girl in phone" />
+                <img class="img-responsive center-block ppter hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" du-parallax y="background" alt="Instagram girl in phone" />
                 <img class="arrow-up hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
                 <h3 class="play-text hidden-xs tilter">Spela filmen!</h3>
               </div>

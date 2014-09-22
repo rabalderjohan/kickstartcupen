@@ -10,7 +10,7 @@
  * @since Kickstartcupen 1.0
  */
 ?>
-      <div class="footer">
+      <div class="footer vignette-bg">
         <?php
         $args = array(
           'numberposts' => 1,
