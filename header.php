@@ -103,9 +103,28 @@
                     <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
                   </div>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-10">
+                  <nav class="MainMenu--desktop">
+                    <ul class="menu">
+                      <li class="first active">
+                        <a href="#">Hur tävlar man?</a>
+                      </li>
+                      <li class="collapsed">
+                        <a href="#">Se alla bidrag</a>
+                      </li>
+                      <li>
+                        <a href="#">Om UF</a>
+                      </li>
+                      <li>
+                        <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
+                      </li>
+                      <li class="last">
+                        <a href="#">Kontakt</a>
+                      </li>
+                    </ul>
+                  </nav>
                   <!-- Static navbar -->
-                  <ul class="nav">
+                  <ul class="ksc-nav" style="display:none">
                     <li class="first">
                       <a class="active" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
                     </li>
