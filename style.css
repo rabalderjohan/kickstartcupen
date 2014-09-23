@@ -137,6 +137,7 @@ a {
 h1 span.superlarge {
 
 }
+a[href^=tel]{ color:inherit; text-decoration:none;}
 p.tilter,.header-instructions p, .page-text p {
 	font-weight: bold;
 }
@@ -150,6 +151,7 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 	-o-transform: rotate(-3deg);
 	/* Internet Explorer */
 	/*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
+	transform: translate3d(-3,0,0);
 }
 .orange,p span {
 	color: #ed8b00;

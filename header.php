@@ -83,9 +83,6 @@
                 <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
               </li>
               <li>
-                <a href="#about" du-smooth-scroll>Om UF</a>
-              </li>
-              <li>
                 <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
               </li>
               <li>
@@ -114,9 +111,6 @@
                           <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
                         </li>
                         <li>
-                          <a href="#about" du-smooth-scroll>Om UF</a>
-                        </li>
-                        <li>
                           <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
                         </li>
                         <li class="last">
@@ -131,9 +125,6 @@
                       </li>
                       <li>
                         <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-                      </li>
-                      <li>
-                        <a href="#about" du-smooth-scroll>Om UF</a>
                       </li>
                       <li>
                         <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
