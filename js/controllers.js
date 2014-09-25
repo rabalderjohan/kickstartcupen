@@ -20,18 +20,26 @@ angular.module('KscApp.controllers',[])
 
   .controller('TagCtrl',['$scope','$modal','TagService','usSpinnerService',function($scope,$modal,TagService,usSpinnerService){
     $scope.loaded = false;
+    $scope.smaller = true;
     $scope.startNum = 12;
     $scope.items = [];
+    $scope.itemsLength = 0;
     $scope.tag = TagService.start();
 
     $scope.$on('rawlist',function(event,response){
       $scope.items = response;
+      $scope.itemsLength = response.length;
       $scope.loaded = true;
       usSpinnerService.stop('spinner');
     });
 
     $scope.infiniteScroll = function() {
+      //$scope.loaded ? $scope.startNum += 12 : null;
+    };
+
+    $scope.nextTwelve = function() {
       $scope.loaded ? $scope.startNum += 12 : null;
+      $scope.itemsLength < $scope.startNum ? $scope.smaller = false : null;
     };
 
     $scope.showItem = function(url) {

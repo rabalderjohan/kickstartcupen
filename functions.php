@@ -29,7 +29,7 @@ function get_ksc_header_items() {
 	</li>
 	*/
 	$items = ''.
-	$items .= '<li class="first active">
+	$items .= '<li class="first">
 							<a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
 						</li>';
 	$items .= '<li class="collapsed">

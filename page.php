@@ -167,6 +167,9 @@ get_header();
               <div class="row" in-view="infiniteScroll()">
                 <div class="col-sm-12 ig-spinner">
                   <span us-spinner="{color:'#ffffff'}" spinner-key="spinner" spinner-start-active="1"></span>
+                  <a ng-click="nextTwelve()" ng-show="loaded && smaller">
+                    <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-down-pink.png" alt="More images arrow" />
+                  </a>
                 </div>
               </div>
             </div>

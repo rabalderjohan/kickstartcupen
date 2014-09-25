@@ -198,11 +198,11 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 }
 .section-break-intro h3 {
 	right: 80px;
-	top: -100px;
+	top: -110px;
 }
 .section-break-intro img {
 	right: 0px;
-	top: -60px;
+	top: -70px;
 }
 .header {
   background-color: #f9f9f9;
@@ -272,6 +272,7 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 }
 .phone-play {
 	position: relative;
+	margin-top: 30px;
 }
 .phone-play .arrow-up, .phone-play .play-text {
 	position: absolute;
@@ -390,6 +391,8 @@ ul.ksc-nav li.last, ul.ksc-nav li.last a {
 /*MainMenu*/
 .MainMenu--desktop {
 	display: table;
+	position: relative;
+	z-index: 1;
 }
 .MainMenu--desktop>.menu {
 	display: table-row;
@@ -626,7 +629,7 @@ nav ul, nav ol {
 		padding-top: 30px;
 	}
 	.header .hd-padder .ksc-push {
-		right: -80px;
+		right: -20px;
 		top: 30px;
 	}
 	.header .header-lamp {
