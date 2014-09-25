@@ -14,6 +14,14 @@
        url('fonts/brushup/pintassilgoprintsbrushup.svg#svgFontName') format('svg');
 }
 /*Bs override*/
+.modal-header {
+	border-bottom: none;
+}
+.modal-content {
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+}
 .form-control::-webkit-input-placeholder {
 	color: #c2c2c2;
 }
@@ -156,6 +164,12 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 .orange,p span {
 	color: #ed8b00;
 }
+.back-to-top {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	z-index: 100;
+}
 .bgbrown {
 	background-color: #623412;
 	color: #fff;
@@ -233,7 +247,18 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 .header .header-nav {
   padding-top: 20px;
 }
+.header .ksc-svg-logo {
+	position: relative;
+	z-index: 10;
+}
 .header .ksc-logo {
+	margin-bottom: 10px;
+	position: relative;
+	top: -125px;
+	left: -110px;
+	margin-bottom: -90px;
+}
+.header .ksc-logo-xs {
 	margin-bottom: 10px;
 }
 .header .logo-wrapper {
@@ -510,6 +535,7 @@ nav ul, nav ol {
 .page-wrapper .ig-item .ig-item-caption .item-share {
 	width: 100%;
 	text-align: right;
+	display: none;
 }
 .page-wrapper .ig-spinner {
 	height: 80px;
@@ -538,9 +564,12 @@ nav ul, nav ol {
 	position: relative;
 }
 .footer .abouter .ksc-push {
-	position: absolute;
-	right: -0px;
-	top: -120px;
+	vertical-align: top;
+	padding-left: 40px;
+
+}
+.footer .footer-ilh {
+	display: inline-block;
 }
 .footer .who-text,.footer .who-arrow {
 	position: absolute;
@@ -601,18 +630,20 @@ nav ul, nav ol {
 		top: 30px;
 	}
 	.header .header-lamp {
-		background-image: url(images/ksc-lamp.png);
-		background-repeat: no-repeat;
-		background-position: 3% top;
+
 	}
 	.page-tags {
-		margin-top: 80px;
+		margin-top: 30px;
 	}
 	.footer .abouter {
 		padding-top: 20px;
 	}
 	.section-break {
 		height:20px;
+	}
+	.back-to-top {
+		bottom: 20px;
+		right: 30px;
 	}
 }
 

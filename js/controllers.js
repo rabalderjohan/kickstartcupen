@@ -1,6 +1,15 @@
 
 angular.module('KscApp.controllers',[])
 
+  .controller('WrappCtrl',['$scope',function($scope){
+    console.log('Wrappit');
+    $scope.rulesCollapsed = false;
+    $scope.rulesFix = function(){
+      console.log('fixed');
+      $scope.rulesCollapsed = true;
+    }
+  }])
+
   .controller('HeaderCtrl',['$scope','parallaxHelper','animationSpeed','animationOffset',function($scope,parallaxHelper,animationSpeed,animationOffset){
     $scope.background = parallaxHelper.createAnimator(animationSpeed,null,null,animationOffset);
   }])

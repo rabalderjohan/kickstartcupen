@@ -57,7 +57,10 @@
       $prize_text = get_field('prize_text',$key->ID);
     }
     ?>
-    <div class="full-wrapper">
+    <div id="top" class="full-wrapper" ng-controller="WrappCtrl">
+      <a href="#top" du-smooth-scroll>
+        <img class="back-to-top" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-back-to-top-pink.png" alt="Back to top image" />
+      </a>
       <div class="header" ng-controller="HeaderCtrl">
         <div class="header-top">
           <div class="container visible-xs">
@@ -76,18 +79,9 @@
           </div>
           <div class="nav-xs hidden-sm" collapse="!navCollapsed">
             <ul>
-              <li>
-                <a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
-              </li>
-              <li>
-                <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-              </li>
-              <li>
-                <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
-              </li>
-              <li>
-                <a href="#">Kontakt</a>
-              </li>
+              <?php
+              get_ksc_header_items();
+              ?>
             </ul>
           </div>
         </div>
@@ -98,41 +92,17 @@
                 <div class="row">
                   <div class="col-sm-2">
                     <div class="logo-wrapper">
-                      <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
+                      <img class="ksc-svg-logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
                     </div>
                   </div>
-                  <div class="col-sm-10">
-                    <nav class="MainMenu--desktop">
+                  <div class="col-sm-10 clearfix">
+                    <nav class="MainMenu--desktop pull-right">
                       <ul class="menu">
-                        <li class="first active">
-                          <a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
-                        </li>
-                        <li class="collapsed">
-                          <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-                        </li>
-                        <li>
-                          <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
-                        </li>
-                        <li class="last">
-                          <a href="#">Kontakt</a>
-                        </li>
+                        <?php
+                        get_ksc_header_items();
+                        ?>
                       </ul>
                     </nav>
-                    <!-- Static navbar -->
-                    <ul class="ksc-nav" style="display:none">
-                      <li class="first">
-                        <a class="active" href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
-                      </li>
-                      <li>
-                        <a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-                      </li>
-                      <li>
-                        <a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
-                      </li>
-                      <li class="last">
-                        <a href="#">Kontakt</a>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -141,7 +111,8 @@
               <div class="container">
                 <div class="row">
                   <div class="col-sm-6 hd-padder">
-                    <img class="img-responsive ksc-logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo.png" alt="Kickstartcupen logotyp" />
+                    <img class="img-responsive ksc-logo-xs visible-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo.png" alt="Kickstartcupen logotyp" />
+                    <img class="img-responsive ksc-logo hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo-lamp.png" alt="Kickstartcupen logotyp" />
                     <p class="tilter">
                       <?php echo $intro_text; ?>
                     </p>
@@ -159,8 +130,8 @@
             <div class="row">
               <div id="instuctions" class="col-sm-6 instructions">
                 <h2 class="as-btn-xs" ng-click="instCollapsed = !instCollapsed"><?php echo $instructions_header; ?></h2>
-                <p class="tilter hidden-sm" collapse="!instCollapsed"><?php echo $instructions_text;  ?></p>
-                <p class="tilter hidden-xs"><?php echo $instructions_text;  ?></p>
+                <p class="tilter hidden-sm" collapse="!instCollapsed"><?php echo $instructions_text;  ?> <a href="#rules" du-smooth-scroll ng-click="rulesCollapsed = !rulesCollapsed">här</a>.</p>
+                <p class="tilter hidden-xs"><?php echo $instructions_text;  ?> <a href="#rules" du-smooth-scroll ng-click="rulesFix()">här</a>.</p>
                 <h2 class="as-btn-xs" ng-click="prizeCollapsed = !prizeCollapsed"><?php echo $prize_header; ?></h2>
                 <p class="tilter hidden-sm" collapse="!prizeCollapsed">
                   <?php echo $prize_text;  ?>
@@ -173,8 +144,7 @@
                 </div>
               </div>
               <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
-                <img class="img-responsive center-block ppter visible-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" alt="Instagram girl in phone" />
-                <img class="img-responsive center-block ppter hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" du-parallax y="background" alt="Instagram girl in phone" />
+                <img class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" alt="Instagram girl in phone" />
                 <img class="arrow-up hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
                 <h3 class="play-text hidden-xs tilter">Spela filmen!</h3>
               </div>

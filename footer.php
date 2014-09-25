@@ -24,7 +24,10 @@
         }
         ?>
         <div id="about" class="container abouter">
-          <h2><?php echo $footer_header; ?></h2>
+          <h2 class="footer-ilh"><?php echo $footer_header; ?></h2>
+          <a href="http://www.ungforetagsamhet.se/" target="_blank">
+            <img class="ksc-push hidden-xs hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
+          </a>
           <div class="row">
             <div class="col-sm-6">
               <p class="tilter somepad">
@@ -42,9 +45,6 @@
                 <img class="who-arrow" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-up-up.png" alt="Pink arrow" />
                 <h3 class="who-text">Vilka är vi och<br>vad vi gör</h3>
               </div>
-              <a href="http://www.ungforetagsamhet.se/" target="_blank">
-                <img class="img-responsive ksc-push hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
-              </a>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <div class="page-rules-search">
+            <div id="rules" class="page-rules-search">
               <div class="row">
                 <div class="col-sm-12 visible-xs">
                   <input class="form-control search search-xs" ng-model="search.user.username" placeholder="Sök">
