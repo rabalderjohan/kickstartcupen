@@ -2,10 +2,8 @@
 angular.module('KscApp.controllers',[])
 
   .controller('WrappCtrl',['$scope',function($scope){
-    console.log('Wrappit');
     $scope.rulesCollapsed = false;
     $scope.rulesFix = function(){
-      console.log('fixed');
       $scope.rulesCollapsed = true;
     }
   }])

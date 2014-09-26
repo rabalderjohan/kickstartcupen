@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ."?" . rand(); ?>" type="text/css" media="screen" />
 
+    <!--[if lt IE 10]>
+	  <link rel="stylesheet" type="text/css" href="ie9-and-down.css" />
+      <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/ksc-ie.css">
+    <![endif]-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,6 +54,7 @@
     );
     $var = get_posts($args);
     foreach ($var as $key) {
+      $intro_background_image = get_field('header_background_image',$key->ID);
       $intro_text = get_field('intro_text',$key->ID);
       $instructions_header = get_field('instructions_header',$key->ID);
       $instructions_text = get_field('instructions_text',$key->ID);
@@ -85,7 +90,7 @@
             </ul>
           </div>
         </div>
-        <div class="header-info">
+        <div class="header-info" style="background-image: url(<?php echo $intro_background_image;  ?>);">
           <div class="header-lamp">
             <div class="header-nav hidden-xs hidden-sm">
               <div class="container lamp-container">
@@ -111,13 +116,13 @@
               <div class="container">
                 <div class="row">
                   <div class="col-sm-6 hd-padder">
-                    <img class="img-responsive ksc-logo-xs visible-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo.png" alt="Kickstartcupen logotyp" />
-                    <img class="img-responsive ksc-logo hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo-lamp.png" alt="Kickstartcupen logotyp" />
+                    <img class="img-responsive ksc-logo-xs visible-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-lamp-v.2.0.png" alt="Kickstartcupen logotyp" />
+                    <img class="img-responsive ksc-logo hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo-w-lamp-v2.0.png" alt="Kickstartcupen logotyp" />
                     <p class="tilter">
                       <?php echo $intro_text; ?>
                     </p>
                     <a href="http://www.ungforetagsamhet.se/" target="_blank">
-                      <img class="img-responsive ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
+                      <img class="ksc-push" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ylw-push.png" alt="Kickstartcupen push" />
                     </a>
                   </div>
                 </div>
@@ -144,9 +149,9 @@
                 </div>
               </div>
               <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
-                <img class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-girl-in-phone.png" ng-click="showMov()" alt="Instagram girl in phone" />
+                <img class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-iphone-no-bg.png" alt="Instagram girl in phone" />
                 <img class="arrow-up hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
-                <h3 class="play-text hidden-xs tilter">Spela filmen!</h3>
+                <img class="play-text" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-play-movie-as-text.png" alt="" />
               </div>
             </div>
           </div>
@@ -158,8 +163,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 section-break-intro hidden-xs">
-                <h3>Scrolla ner för att följa cupen!</h3>
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow.png" alt="Pink arrow" />
+                <img class="scrll-txt" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-scroll-text-as-img.png" alt="" />
+                <img class="scrll-img" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow.png" alt="Pink arrow" />
               </div>
             </div>
           </div>

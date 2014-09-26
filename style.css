@@ -69,6 +69,9 @@
 .btn-ksc-blu:hover,.btn-ksc-blu:active,.btn-ksc-blu:focus {
 	color: #fff;
 }
+.btn-more {
+	margin-top: 20px;
+}
 .form-control {
 	#c2c2c2;
 }
@@ -196,11 +199,11 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 .section-break-intro h3, .section-break-intro img {
 	position: absolute;
 }
-.section-break-intro h3 {
-	right: 80px;
-	top: -110px;
+.section-break-intro .scrll-txt {
+	right: 60px;
+	top: -90px;
 }
-.section-break-intro img {
+.section-break-intro .scrll-img {
 	right: 0px;
 	top: -70px;
 }
@@ -237,7 +240,6 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 
 }
 .header .header-info {
-  background-image: url(images/ksc-bg-people.png);
   height: 561px;
   width: 100%;
   background-color: #70aed1;
@@ -272,13 +274,14 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 }
 .phone-play {
 	position: relative;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 .phone-play .arrow-up, .phone-play .play-text {
 	position: absolute;
 }
 .phone-play img {
 	vertical-align: text-bottom;
+	max-width: 342px;
 	/*
 	bottom: -60px;
 	position: relative;
@@ -289,7 +292,7 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 	top: 50%;
 }
 .phone-play .play-text {
-	right: -5%;
+	right: -7%;
 	top: 60%;
 }
 .instructions {

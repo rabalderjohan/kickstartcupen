@@ -59,7 +59,7 @@ get_header();
                         </p>
                       </div>
                       <div class="col-sm-6">
-                        <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-rules-image.png" alt="" />
+                        <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-scheme-v.2.0.png" alt="" />
                       </div>
                     </div>
                     <div>
@@ -165,10 +165,9 @@ get_header();
                 </div>
               </div>
               <div class="row" in-view="infiniteScroll()">
-                <div class="col-sm-12 ig-spinner">
+                <div class="col-sm-12 ig-spinner text-center">
                   <span us-spinner="{color:'#ffffff'}" spinner-key="spinner" spinner-start-active="1"></span>
-                  <a ng-click="nextTwelve()" ng-show="loaded && smaller">
-                    <img class="img-responsive center-block" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-down-pink.png" alt="More images arrow" />
+                  <a class="btn btn-ksc-blu btn-more" ng-click="nextTwelve()" ng-show="loaded && smaller">Ladda fler
                   </a>
                 </div>
               </div>

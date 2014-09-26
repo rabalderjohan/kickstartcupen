@@ -1,6 +1,6 @@
 
 angular.module('KscApp.services',[])
-  .service('TagService',['$http','$rootScope',function($http,$rootScope){
+  .service('TagService',['$http','$rootScope','tagname',function($http,$rootScope,tagname){
     var self = this;
     this.toplist = [];
     this.likes = 0;
@@ -9,7 +9,7 @@ angular.module('KscApp.services',[])
     var shit = 'skiiiit';
     this.start = function() {
       self.toplist = [];
-      var endPoint = "https://api.instagram.com/v1/tags/drpeppermedina/media/recent?client_id=7cfece48918a4a1db389814eaefda823&callback=JSON_CALLBACK";
+      var endPoint = "https://api.instagram.com/v1/tags/"+tagname+"/media/recent?client_id=7cfece48918a4a1db389814eaefda823&callback=JSON_CALLBACK";
       this.getMore(endPoint);
     }
 
@@ -31,15 +31,11 @@ angular.module('KscApp.services',[])
             self.comments += response.data[i].comments.count;
             self.likes += response.data[i].likes.count;
           }
-          console.log('Done');
-          console.log('Total: '+self.total);
-          console.log('Comments: '+self.comments);
-          console.log('Likes: '+self.likes);
           $rootScope.$broadcast('rawlist',self.toplist);
         }
       })
       .error(function(error){
-        console.log(error);
+        //console.log(error);
       });
     }
   }])
