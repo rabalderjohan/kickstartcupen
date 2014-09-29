@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ."?" . rand(); ?>" type="text/css" media="screen" />
 
-    <!--[if lt IE 10]>
-	  <link rel="stylesheet" type="text/css" href="ie9-and-down.css" />
+    <!--[if IE]>
       <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/ksc-ie.css">
     <![endif]-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -68,7 +67,7 @@
       </a>
       <div class="header" ng-controller="HeaderCtrl">
         <div class="header-top">
-          <div class="container visible-xs">
+          <div class="container visible-sm visible-xs">
             <div class="row">
               <div class="col-sm-6 col-xs-6">
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.svg" alt="" />
@@ -82,7 +81,7 @@
               </div>
             </div>
           </div>
-          <div class="nav-xs hidden-sm" collapse="!navCollapsed">
+          <div class="nav-xs hidden-md" collapse="!navCollapsed">
             <ul>
               <?php
               get_ksc_header_items();
@@ -90,7 +89,7 @@
             </ul>
           </div>
         </div>
-        <div class="header-info" style="background-image: url(<?php echo $intro_background_image;  ?>);">
+        <div class="header-info">
           <div class="header-lamp">
             <div class="header-nav hidden-xs hidden-sm">
               <div class="container lamp-container">
@@ -116,8 +115,8 @@
               <div class="container">
                 <div class="row">
                   <div class="col-sm-6 hd-padder">
-                    <img class="img-responsive ksc-logo-xs visible-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-lamp-v.2.0.png" alt="Kickstartcupen logotyp" />
-                    <img class="img-responsive ksc-logo hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo-w-lamp-v2.0.png" alt="Kickstartcupen logotyp" />
+                    <img class="img-responsive ksc-logo-xs visible-xs visible-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-lamp-v.2.0.png" alt="Kickstartcupen logotyp" />
+                    <img class="img-responsive ksc-logo hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-logo-w-lamp-v2.0.png" alt="Kickstartcupen logotyp" />
                     <p class="tilter">
                       <?php echo $intro_text; ?>
                     </p>
@@ -150,8 +149,8 @@
               </div>
               <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
                 <img class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-iphone-no-bg.png" alt="Instagram girl in phone" />
-                <img class="arrow-up hidden-xs" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
-                <img class="play-text" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-play-movie-as-text.png" alt="" />
+                <img class="arrow-up hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
+                <img class="play-text hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-play-movie-as-text.png" alt="" />
               </div>
             </div>
           </div>
@@ -162,8 +161,8 @@
         <div class="section-break">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 section-break-intro hidden-xs">
-                <img class="scrll-txt" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-scroll-text-as-img.png" alt="" />
+              <div class="col-sm-6 section-break-intro hidden-xs hidden-sm">
+                <img class="scrll-txt" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-scroll-text-as-img-v.2.png" alt="" />
                 <img class="scrll-img" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow.png" alt="Pink arrow" />
               </div>
             </div>

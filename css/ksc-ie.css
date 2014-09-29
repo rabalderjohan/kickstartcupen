@@ -5,3 +5,11 @@ h2.as-btn-xs {
 h2 {
   font-size: 52px;
 }
+@media (min-width: 1100px) {
+  h2.as-btn-xs {
+    font-size: 52px;
+  }
+  h2 {
+    font-size: 52px;
+  }
+}

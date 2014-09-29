@@ -5,4 +5,4 @@ angular.module('KscApp.config',[])
 
   .constant('animationOffset', -480)
 
-  .constant('tagname', 'drpeppermedina')
+  .constant('tagname', 'kickstartcupen')

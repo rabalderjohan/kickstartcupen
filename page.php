@@ -11,7 +11,7 @@
  */
 get_header();
 ?>
-      <div class="page-wrapper" ng-controller="PageCtrl">
+      <div id="page" class="page-wrapper" ng-controller="PageCtrl">
         <?php if (have_posts()) : while (have_posts()) : the_post();?>
           <?php
             $rules_button = get_field('rules_button');
@@ -66,7 +66,7 @@ get_header();
                       <h5 class="sheme-header"> <?php echo $scheme_header; ?> </h5>
                     </div>
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 scheme-date-pad">
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
@@ -78,7 +78,7 @@ get_header();
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 scheme-date-pad">
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
@@ -92,7 +92,7 @@ get_header();
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 scheme-date-pad">
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
@@ -104,7 +104,7 @@ get_header();
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 scheme-date-pad">
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
@@ -118,7 +118,7 @@ get_header();
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 scheme-date-pad">
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
@@ -130,7 +130,7 @@ get_header();
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 scheme-date-pad">
                         <div class="row">
                           <div class="col-sm-3">
                             <p>

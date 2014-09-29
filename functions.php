@@ -33,7 +33,7 @@ function get_ksc_header_items() {
 							<a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
 						</li>';
 	$items .= '<li class="collapsed">
-							<a href="#tags" du-smooth-scroll>Se alla bidrag</a>
+							<a href="#page" du-smooth-scroll>Se alla bidrag</a>
 						</li>';
 	$items .= '<li class="collapsed">
 							<a href="#about" du-smooth-scroll>Om UF</a>
@@ -42,7 +42,7 @@ function get_ksc_header_items() {
 							<a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
 						</li>';
 	$items .= '<li class="last">
-							<a href="#">Kontakt</a>
+							<a href="mailto:lina.johnson@ungforetagsamhet.se">Kontakt</a>
 						</li>';
 	echo $items;
 }

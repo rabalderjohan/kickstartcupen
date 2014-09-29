@@ -43,7 +43,7 @@
               </p>
               <div class="fotter-who hidden-xs">
                 <img class="who-arrow" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-up-up.png" alt="Pink arrow" />
-                <h3 class="who-text">Vilka är vi och<br>vad vi gör</h3>
+                <img class="who-text" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-who-we-are-txt-as-img.png" alt="" />
               </div>
             </div>
           </div>

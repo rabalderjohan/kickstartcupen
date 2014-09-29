@@ -56,8 +56,8 @@
 	font-family: brushup, arial, sans-serif;
 	font-size: 24px;
 }
-.btn:focus {
-	outline:0;
+.btn,.btn:focus,.btn:active {
+	outline:0!important;
 }
 .btn-ksc-blu {
 	background-color: #a6cde3;
@@ -243,6 +243,7 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
   height: 561px;
   width: 100%;
   background-color: #70aed1;
+	background-image: url(images/ksc-header-bg-mobile.png);
   background-position: center 50%;
   background-size: cover;
 }
@@ -281,7 +282,6 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 }
 .phone-play img {
 	vertical-align: text-bottom;
-	max-width: 342px;
 	/*
 	bottom: -60px;
 	position: relative;
@@ -514,6 +514,9 @@ nav ul, nav ol {
 .page-wrapper .page-rules-show h5 {
 	font-weight: bold;
 }
+.page-wrapper .page-rules-show .scheme-date-pad {
+	margin-bottom: 20px;
+}
 .page-wrapper .ig-item {
 	background-color: #fff;
 	margin-bottom: 15px;
@@ -594,7 +597,7 @@ nav ul, nav ol {
 		padding: 0;
 		background-color: transparent;
 		color: #ae1a87;
-		font-size: 68px;
+		font-size: 52px;
 		-webkit-transform: rotate(-3deg);
 		/* Firefox */
 		-moz-transform: rotate(-3deg);
@@ -609,7 +612,7 @@ nav ul, nav ol {
 		padding: 0;
 		background-color: transparent;
 		color: #ae1a87;
-		font-size: 68px;
+		font-size: 52px;
 		-webkit-transform: rotate(-3deg);
 		/* Firefox */
 		-moz-transform: rotate(-3deg);
@@ -619,6 +622,18 @@ nav ul, nav ol {
 		-o-transform: rotate(-3deg);
 		/* Internet Explorer */
 		/*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
+	}
+	.header .header-info {
+		background-image: url(images/ksc-bg-v.2.0.jpg);
+	}
+	.page-wrapper .page-rules-show .scheme-date-pad {
+		margin-bottom: 0px;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.phone-play img {
+		max-width: 342px;
 	}
 }
 
@@ -652,8 +667,17 @@ nav ul, nav ol {
 		right: 30px;
 	}
 }
-
+@media (min-width: 992px) and (max-width: 1099px) {
+	.MainMenu--desktop>.menu>li>a {
+		padding: 0 10px;
+	}
+}
 /* Large devices (large desktops, 1100px and up) */
 @media (min-width: 1100px) {
-
+	h2 {
+		font-size: 60px;
+	}
+	h2.as-btn-xs {
+		font-size: 60px;
+	}
 }
