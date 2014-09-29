@@ -287,6 +287,23 @@ p.tilter, .header-instructions p, h3.tilter,.page-text p {
 	position: relative;
 	*/
 }
+.phone-play .phone-wrapper {
+	border: none;
+	margin: auto;
+	background-image: url(images/ksc-iphone-no-bg.png);
+	background-position: -4px top;
+	width: 281px;
+	height: 380px;
+	background-size: cover;
+	padding-top: 83px;
+}
+.phone-play iframe {
+	margin: auto;
+	display: block;
+	/*margin-top: 102px;*/
+	width: 225px;
+	height: 234px;
+}
 .phone-play .arrow-up {
 	right: 40px;
 	top: 50%;
@@ -634,6 +651,21 @@ nav ul, nav ol {
 	}
 	.phone-play img {
 		max-width: 342px;
+	}
+	.phone-play .phone-wrapper {
+		border: none;
+		width: 342px;
+		height: 478px;
+		margin: auto;
+		background-image: url(images/ksc-iphone-no-bg.png);
+		background-position: -4px top;
+		padding-top: 102px;
+	}
+	.phone-play iframe {
+		margin: auto;
+		display: block;
+		width: 275px;
+		height: 285px;
 	}
 }
 

@@ -13,3 +13,6 @@ h2 {
     font-size: 52px;
   }
 }
+.phone-play .phone-wrapper {
+  background-position: -5px top;
+}

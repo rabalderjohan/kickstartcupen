@@ -60,6 +60,9 @@
       $prize_header = get_field('prize_header',$key->ID);
       $prize_text = get_field('prize_text',$key->ID);
     }
+
+    $movies = array('//www.youtube.com/embed/Uw4p1k2m5tI?rel=0&controls=0&showinfo=0&autoplay=0','//www.youtube.com/embed/HMD7Y4jTsdk?rel=0&controls=0&showinfo=0&autoplay=0');
+    $the_pick = $movies[array_rand($movies)];
     ?>
     <div id="top" class="full-wrapper" ng-controller="WrappCtrl">
       <a href="#top" du-smooth-scroll>
@@ -148,7 +151,10 @@
                 </div>
               </div>
               <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
-                <img class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-iphone-no-bg.png" alt="Instagram girl in phone" />
+                <div class="phone-wrapper">
+                  <iframe width="275" height="285" src="<?php echo $the_pick; ?>" frameborder="0" allowfullscreen></iframe>
+                  <img style="display:none;" class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-iphone-no-bg.png" alt="Instagram girl in phone" />
+                </div>
                 <img class="arrow-up hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
                 <img class="play-text hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-play-movie-as-text.png" alt="" />
               </div>

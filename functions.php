@@ -36,7 +36,7 @@ function get_ksc_header_items() {
 							<a href="#page" du-smooth-scroll>Se alla bidrag</a>
 						</li>';
 	$items .= '<li class="collapsed">
-							<a href="#about" du-smooth-scroll>Om UF</a>
+							<a href="#about" du-smooth-scroll>Om oss</a>
 						</li>';
 	$items .= '<li>
 							<a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
