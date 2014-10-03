@@ -16,6 +16,25 @@ angular.module('KscApp.controllers',[])
 
   }])
 
+  .controller('BasicRoundCtrl',['$scope','BasicRoundFctry','usSpinnerService',function($scope,BasicRoundFctry,usSpinnerService){
+    console.log('Hejsan v');
+    $scope.loaded = false;
+    $scope.items = [];
+    $scope.startNum = 12;
+    BasicRoundFctry.getItems(function(pItems){
+      console.log(pItems);
+      $scope.items = pItems;
+      $scope.loaded = true;
+      console.log('bajs');
+      usSpinnerService.stop('spinner-basic');
+      console.log('bajs prutt');
+      //$scope.$apply;
+    });
+    $scope.vote = function(){
+      console.log('Vote');
+    }
+  }])
+
   .controller('TagCtrl',['$scope','$modal','TagService','usSpinnerService',function($scope,$modal,TagService,usSpinnerService){
     $scope.loaded = false;
     $scope.smaller = true;
@@ -29,6 +48,7 @@ angular.module('KscApp.controllers',[])
       $scope.itemsLength = response.length;
       $scope.loaded = true;
       usSpinnerService.stop('spinner');
+      console.log(JSON.stringify($scope.items));
     });
 
     $scope.infiniteScroll = function() {

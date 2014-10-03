@@ -39,6 +39,7 @@
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/spin.js/spin.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-spinner/angular-spinner.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-inview/angular-inview.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-timer/dist/angular-timer.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/app.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/controllers.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/factories.js"></script>
@@ -61,7 +62,7 @@
       $prize_text = get_field('prize_text',$key->ID);
     }
 
-    $movies = array('//www.youtube.com/embed/Uw4p1k2m5tI?rel=0&controls=0&showinfo=0&autoplay=0','//www.youtube.com/embed/HMD7Y4jTsdk?rel=0&controls=0&showinfo=0&autoplay=0');
+    $movies = array('//www.youtube.com/embed/HxnrkFELX6M?rel=0&controls=0&showinfo=0&autoplay=0','//www.youtube.com/embed/URUGWbpRc_I?rel=0&controls=0&showinfo=0&autoplay=0');
     $the_pick = $movies[array_rand($movies)];
     ?>
     <div id="top" class="full-wrapper" ng-controller="WrappCtrl">
@@ -137,7 +138,7 @@
             <div class="row">
               <div id="instuctions" class="col-sm-6 instructions">
                 <h2 class="as-btn-xs" ng-click="instCollapsed = !instCollapsed"><?php echo $instructions_header; ?></h2>
-                <p class="tilter hidden-sm" collapse="!instCollapsed"><?php echo $instructions_text;  ?> <a href="#rules" du-smooth-scroll ng-click="rulesCollapsed = !rulesCollapsed">här</a>.</p>
+                <p class="tilter hidden-sm awh-sm" collapse="!instCollapsed"><?php echo $instructions_text;  ?> <a href="#rules" du-smooth-scroll ng-click="rulesCollapsed = !rulesCollapsed">här</a>.</p>
                 <p class="tilter hidden-xs"><?php echo $instructions_text;  ?> <a href="#rules" du-smooth-scroll ng-click="rulesFix()">här</a>.</p>
                 <h2 class="as-btn-xs" ng-click="prizeCollapsed = !prizeCollapsed"><?php echo $prize_header; ?></h2>
                 <p class="tilter hidden-sm" collapse="!prizeCollapsed">
@@ -153,7 +154,6 @@
               <div class="col-sm-6 phone-play" ng-controller="PlayCtrl">
                 <div class="phone-wrapper">
                   <iframe width="275" height="285" src="<?php echo $the_pick; ?>" frameborder="0" allowfullscreen></iframe>
-                  <img style="display:none;" class="img-responsive center-block ppter" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-iphone-no-bg.png" alt="Instagram girl in phone" />
                 </div>
                 <img class="arrow-up hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-pnk-up.png" alt="Arrow ponting to phone" />
                 <img class="play-text hidden-xs hidden-sm" src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-play-movie-as-text.png" alt="" />
