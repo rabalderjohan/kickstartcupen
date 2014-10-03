@@ -16,23 +16,26 @@ angular.module('KscApp.controllers',[])
 
   }])
 
-  .controller('BasicRoundCtrl',['$scope','$cookieStore','BasicRoundFctry','usSpinnerService',function($scope,$cookieStore,BasicRoundFctry,usSpinnerService){
-    console.log('Hejsan v');
+  .controller('BasicRoundCtrl',['$scope','$cookieStore','BasicRoundFctry','VoteFctry','usSpinnerService',function($scope,$cookieStore,BasicRoundFctry,VoteFctry,usSpinnerService){
     $scope.loaded = false;
     $scope.items = [];
     $scope.startNum = 12;
-    BasicRoundFctry.getItems(function(pItems){
-      $scope.items = pItems;
+    var self = $scope;
+
+    BasicRoundFctry.getItemsAPI(function(pItems){
+      $scope.items = pItems.posts;
       $scope.loaded = true;
     });
 
-    $scope.vote = function(){
-      console.log('Vote');
+    $scope.vote = function(id,index){
+      VoteFctry.vote(id,function(response){
+        if(response.status === 'success') {
+          $scope.items[index].custom_fields.votes[0] = parseInt($scope.items[index].custom_fields.votes[0]) + 1;
+        };
+      })
       if ($cookieStore.get('voted')) {
-        console.log('I voted');
       } else {
         $cookieStore.put('voted',true);
-        console.log('I did not vote');
       }
     }
   }])

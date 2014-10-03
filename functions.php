@@ -1,33 +1,6 @@
 <?php
 
 function get_ksc_header_items() {
-	/*
-	<li class="first active">
-		<a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
-	</li>
-	<li class="collapsed">
-		<a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-	</li>
-	<li>
-		<a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
-	</li>
-	<li class="last">
-		<a href="#">Kontakt</a>
-	</li>
-	----
-	<li class="first active">
-		<a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
-	</li>
-	<li class="collapsed">
-		<a href="#tags" du-smooth-scroll>Se alla bidrag</a>
-	</li>
-	<li>
-		<a href="http://www.ungforetagsamhet.se/" target="_blank">ungforetagsamhet.se</a>
-	</li>
-	<li class="last">
-		<a href="#">Kontakt</a>
-	</li>
-	*/
 	$items = ''.
 	$items .= '<li class="first">
 							<a href="#instuctions" du-smooth-scroll>Hur tävlar man?</a>
@@ -47,7 +20,7 @@ function get_ksc_header_items() {
 	echo $items;
 }
 function shit() {
-	echo hej;
+
 }
 
 add_action("init", "site_init");
@@ -72,5 +45,36 @@ function site_init() {
 	);
 	register_post_type( "basicitem", $args );
 
+}
+
+/*AJAX Setup*/
+add_action("wp_ajax_nopriv_ksc_vote", "ksc_vote");
+add_action("wp_ajax_ksc_vote", "ksc_vote");
+/*
+function ksc_ajaxer()
+{
+  wp_localize_script( 'function', 'my_ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+}
+*/
+/*AJAX*/
+function ksc_vote(){
+	$id = $_REQUEST[id];
+	$arr = '';
+	$test = false;
+	if ($test) {
+		$arr = array(
+			"status" => "failed"
+		);
+	} else {
+		$votes = get_field('votes',$id);
+		$votes +=1;
+		update_field('votes', $votes, $id);
+		$arr = array(
+			"status" => "success"
+		);
+	}
+	//print_r($arr);
+	echo json_encode($arr);
+	die();
 }
 ?>
