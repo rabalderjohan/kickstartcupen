@@ -172,7 +172,6 @@ get_header();
               </div>
               <div class="row">
                 <div class="col-sm-12 ig-spinner text-center">
-                  <span us-spinner="{color:'#ffffff'}" spinner-key="spinner-basic" spinner-start-active="1"></span>
                   <a class="btn btn-ksc-blu btn-more" ng-click="nextTwelve()" ng-show="loaded && smaller">Ladda fler
                   </a>
                 </div>

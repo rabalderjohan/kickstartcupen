@@ -16,22 +16,24 @@ angular.module('KscApp.controllers',[])
 
   }])
 
-  .controller('BasicRoundCtrl',['$scope','BasicRoundFctry','usSpinnerService',function($scope,BasicRoundFctry,usSpinnerService){
+  .controller('BasicRoundCtrl',['$scope','$cookieStore','BasicRoundFctry','usSpinnerService',function($scope,$cookieStore,BasicRoundFctry,usSpinnerService){
     console.log('Hejsan v');
     $scope.loaded = false;
     $scope.items = [];
     $scope.startNum = 12;
     BasicRoundFctry.getItems(function(pItems){
-      console.log(pItems);
       $scope.items = pItems;
       $scope.loaded = true;
-      console.log('bajs');
-      usSpinnerService.stop('spinner-basic');
-      console.log('bajs prutt');
-      //$scope.$apply;
     });
+
     $scope.vote = function(){
       console.log('Vote');
+      if ($cookieStore.get('voted')) {
+        console.log('I voted');
+      } else {
+        $cookieStore.put('voted',true);
+        console.log('I did not vote');
+      }
     }
   }])
 

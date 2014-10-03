@@ -33,6 +33,7 @@
     <![endif]-->
     <!-- Le javascript -->
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular/angular.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/angular-scroll/angular-scroll.min.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bower_components/ng-parallax/angular-parallax.min.js"></script>

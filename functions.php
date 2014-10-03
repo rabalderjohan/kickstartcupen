@@ -64,5 +64,13 @@ function site_init() {
 		"label" => "CustomFooter"
 	);
 	register_post_type( "customfooter", $args );
+
+	$args = array(
+		"public" => true,
+		"label" => "BasicItem",
+		"supports" => array("title")
+	);
+	register_post_type( "basicitem", $args );
+
 }
 ?>

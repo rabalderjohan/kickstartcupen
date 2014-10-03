@@ -570,6 +570,7 @@ nav ul, nav ol {
 	width: 51px;
 	height: 44px;
 	background-image: url(images/ksc-hearts.png);
+	background-position: left 45px;
 	line-height: 40px;
 	font-size: 14px;
 	color: #fff;
@@ -577,6 +578,9 @@ nav ul, nav ol {
 	position: absolute;
 	right: 20px;
 	bottom: 40px;
+}
+.page-wrapper .ig-item .vote-heart:hover {
+	background-position: left top;
 }
 .page-wrapper .ig-spinner {
 	height: 80px;
