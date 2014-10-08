@@ -7,7 +7,7 @@ angular.module('KscApp.factories',[])
       vote: function(id,callback){
         var endPoint = currenturl+'wp-admin/admin-ajax.php';
         $http({method:'post',url:endPoint,params:{action:'ksc_vote',id:id}})
-          .success(function(response){            
+          .success(function(response){
             callback(response);
           })
           .error(function(error){

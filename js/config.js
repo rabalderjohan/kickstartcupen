@@ -8,3 +8,5 @@ angular.module('KscApp.config',[])
   .constant('tagname', 'kickstartcupen')
 
   .constant('currenturl','http://localhost:8888/kickstartcupen/')
+
+  //.constant('currenturl','http://rbmedia.se/gfx/ksc/')

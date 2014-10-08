@@ -154,8 +154,8 @@ get_header();
               <div class="row">
                 <div class="col-sm-3" ng-repeat="item in items | filter:search | limitTo:startNum">
                   <div class="ig-item">
-                    <img class="img-responsive" ng-src="{{item.custom_fields.photo_url[0]}}" alt="" ng-click="showItem(item.link)" />
-                    <h6 ng-click="isCollapsed = !isCollapsed">@{{item.title}}</h6>
+                    <img class="img-responsive" ng-src="{{item.custom_fields.photo_url[0]}}" alt="" ng-click="showItem(item.custom_fields.embed_url[0])" />
+                    <h6 class="no-bg-img" ng-click="isCollapsed = !isCollapsed">@{{item.title}}<img src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-arrow-down-gray.png" alt="" /></h6>
                     <div class="ig-item-caption" collapse="!isCollapsed">
                       <p>
                         {{item.custom_fields.instagram_caption[0]}}

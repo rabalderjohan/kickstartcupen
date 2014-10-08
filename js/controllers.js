@@ -16,7 +16,7 @@ angular.module('KscApp.controllers',[])
 
   }])
 
-  .controller('BasicRoundCtrl',['$scope','$cookieStore','BasicRoundFctry','VoteFctry','usSpinnerService',function($scope,$cookieStore,BasicRoundFctry,VoteFctry,usSpinnerService){
+  .controller('BasicRoundCtrl',['$scope','$cookieStore','$modal','BasicRoundFctry','VoteFctry','usSpinnerService',function($scope,$cookieStore,$modal,BasicRoundFctry,VoteFctry,usSpinnerService){
     $scope.loaded = false;
     $scope.items = [];
     $scope.startNum = 12;
@@ -28,15 +28,58 @@ angular.module('KscApp.controllers',[])
     });
 
     $scope.vote = function(id,index){
-      VoteFctry.vote(id,function(response){
-        if(response.status === 'success') {
-          $scope.items[index].custom_fields.votes[0] = parseInt($scope.items[index].custom_fields.votes[0]) + 1;
-        };
-      })
       if ($cookieStore.get('voted')) {
       } else {
         $cookieStore.put('voted',true);
+        VoteFctry.vote(id,function(response){
+          if(response.status === 'success') {
+            $scope.items[index].custom_fields.votes[0] = parseInt($scope.items[index].custom_fields.votes[0]) + 1;
+          };
+        })
       }
+    }
+
+    $scope.showItem = function(url) {
+      console.log('SHOW');
+      $scope.link = url;
+      var modalInstance = $modal.open({
+        templateUrl: 'wp-content/themes/kickstartcupen/partials/itemmodal.html',
+        size: '',
+        controller: ModalInstanceCtrl,
+        resolve: {
+          items: function () {
+            return $scope.items;
+          },
+          url: function() {
+            return $scope.link;
+          }
+        }
+      })
+
+      modalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+      }, function () {
+        //console.info('Modal dismissed at: ' + new Date());
+      });
+    }
+    var ModalInstanceCtrl = function ($scope, $modalInstance, $sce,items, url) {
+
+      $scope.items = items;
+      $scope.url = url;
+
+      $scope.trustedUrl = $sce.trustAsResourceUrl($scope.url+'embed');
+
+      $scope.selected = {
+        item: $scope.items[0]
+      };
+
+      $scope.ok = function () {
+        $modalInstance.close($scope.selected.item);
+      };
+
+      $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+      };
     }
   }])
 
@@ -53,7 +96,8 @@ angular.module('KscApp.controllers',[])
       $scope.itemsLength = response.length;
       $scope.loaded = true;
       usSpinnerService.stop('spinner');
-      console.log(JSON.stringify($scope.items));
+      //console.log(JSON.stringify($scope.items));
+      console.log($scope.items);
     });
 
     $scope.infiniteScroll = function() {
