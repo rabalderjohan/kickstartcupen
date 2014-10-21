@@ -46,6 +46,7 @@
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/factories.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/services.js"></script>
     <script src="<?php echo get_bloginfo('template_directory'); ?>/js/config.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/js/directives.js"></script>
   </head>
   <body ng-cloak>
     <?php

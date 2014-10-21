@@ -28,6 +28,8 @@ angular.module('KscApp.controllers',[])
     });
 
     $scope.vote = function(id,index){
+      console.log('Vote started');
+      /*
       if ($cookieStore.get('voted')) {
       } else {
         $cookieStore.put('voted',true);
@@ -37,6 +39,15 @@ angular.module('KscApp.controllers',[])
           };
         })
       }
+      */
+      VoteFctry.vote(id,function(response){
+        console.log('Voted'+ response);
+        console.log(response);
+        if(response.status == 'success') {
+          console.log('Voted success');
+          $scope.items[index].custom_fields.votes[0] = parseInt($scope.items[index].custom_fields.votes[0]) + 1;
+        };
+      })
     }
 
     $scope.showItem = function(url) {

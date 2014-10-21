@@ -70,7 +70,7 @@ get_header();
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
-                              30/9-12/10
+                              30/9-31/10
                             </p>
                           </div>
                           <div class="col-sm-9">
@@ -82,7 +82,7 @@ get_header();
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
-                              20 okt
+                              10 nov
                             </p>
                           </div>
                           <div class="col-sm-9">
@@ -96,7 +96,7 @@ get_header();
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
-                              13 okt
+                              4 nov
                             </p>
                           </div>
                           <div class="col-sm-9">
@@ -108,7 +108,7 @@ get_header();
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
-                              22 okt
+                              12 nov
                             </p>
                           </div>
                           <div class="col-sm-9">
@@ -122,7 +122,7 @@ get_header();
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
-                              16 okt
+                              7 nov
                             </p>
                           </div>
                           <div class="col-sm-9">
@@ -134,7 +134,7 @@ get_header();
                         <div class="row">
                           <div class="col-sm-3">
                             <p>
-                              24 okt
+                              14 nov
                             </p>
                           </div>
                           <div class="col-sm-9">

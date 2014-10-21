@@ -96,6 +96,9 @@
 .embed-responsive.embed-responsive-4by3 {
 	padding-bottom: 100%;
 }
+.embed-responsive.embed-responsive-16by9 {
+	padding-bottom: 100%;
+}
 /**/
 body {
 	font-family: arial,sans-serif;
@@ -579,6 +582,7 @@ nav ul, nav ol {
 	background-position: left 45px;
 	line-height: 40px;
 	font-size: 14px;
+	font-weight: 700;
 	color: #fff;
 	text-align: center;
 	position: absolute;

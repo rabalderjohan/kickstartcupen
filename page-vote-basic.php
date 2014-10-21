@@ -164,7 +164,7 @@ get_header();
                         <img src="<?php echo get_bloginfo('template_directory'); ?>/images/ksc-ig-view.png" alt="" />
                       </div>
                     </div>
-                    <div class="vote-heart" ng-click="vote(item.id,$index)">
+                    <div class="vote-heart" ng-click="vote(item.id,$index)" vote-heart>
                       <span>{{item.custom_fields.votes[0]}}</span>
                     </div>
                   </div>
